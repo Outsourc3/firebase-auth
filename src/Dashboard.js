@@ -33,9 +33,16 @@ function Dashboard() {
   return (
     <div className="dashboard">
       <div className="dashboard__container">
-        Logged in as
+        Logged in as {user?.uid}
         <div>{name}</div>
-        <div>{user?.email}</div>
+        <div
+          style={{
+            maxWidth: "500px",
+            wordWrap: "break-word",
+          }}
+        >
+          {user?.accessToken}
+        </div>
         <button className="dashboard__btn" onClick={logout}>
           Logout
         </button>
